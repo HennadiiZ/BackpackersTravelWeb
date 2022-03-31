@@ -178,37 +178,7 @@
        </footer>
    </div>
 
-   <script>
-        const header__burger = document.querySelector('.header__burger'); 
-        const header__menu = document.querySelector('.header__menu');
+   <script src="js/script.js"></script>
 
-        const header__menu_locations = document.querySelector('._locations');
-        const header__menu_benefits = document.querySelector('._benefits');
-        const header__menu_contact = document.querySelector('._contact');
-
-        header__burger.addEventListener('click', function(event){ 
-            header__burger.classList.toggle('active'); 
-            header__menu.classList.toggle('active'); 
-            document.body.classList.toggle('lock'); 
-        })
-        header__menu_locations.addEventListener('click', function(event){
-            // header__burger.classList.remove('active'); 
-            // header__menu.classList.remove('active'); 
-            // document.body.classList.remove('lock'); 
-            header__burger.classList.toggle('active'); 
-            header__menu.classList.toggle('active'); 
-            document.body.classList.toggle('lock');
-        })
-        header__menu_benefits.addEventListener('click', function(event){
-            header__burger.classList.toggle('active'); 
-            header__menu.classList.toggle('active'); 
-            document.body.classList.toggle('lock');
-        })
-        header__menu_contact.addEventListener('click', function(event){
-            header__burger.classList.toggle('active'); 
-            header__menu.classList.toggle('active'); 
-            document.body.classList.toggle('lock');
-        })
-   </script>
 </body>
 </html>
