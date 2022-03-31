@@ -36,10 +36,10 @@
                                 <a href="#locations" class="_locations">Locations</a>
                             </li>
                             <li class="nav-link">
-                                <a href="#benefits">Benefits</a>
+                                <a href="#benefits" class="_benefits">Benefits</a>
                             </li>
                             <li class="nav-link">
-                                <a href="#contact">Contact</a>
+                                <a href="#contact" class="_contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -77,7 +77,60 @@
                     <img src="img/cloud.png" class="moving-cloud-2 cloud" alt="cloud">
                 </div>
             </section>
-            <!-- City -->
+            <!-- benefits -->
+            <section class="benefits" id="benefits">
+                <div class="benefits__header-wrapper">
+                    <div class="container">
+                        <div class="benefits__header">
+                            <h2>The Best Travel.</h2>
+                            <h3>
+                                We cover everything for picking the perfect hotel <br>
+                                to flight and destination.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="benefits__items">
+                        <div class="benefits__item item-block item-block_1">
+                            <div class="item-block-icon">
+                                <img src="./img/icons/route-solid.svg" alt="route">
+                            </div>
+                            <h3 class="item-block-header">
+                                Travel 
+                            </h3>
+                            <h4 class="item-block-body">
+                                Traveling the world can be expensive. But what if you could travel the world for free! Here are over 16 ways to travel the world for free!
+                            </h4>
+                        </div>
+
+                        <div class="benefits__item item-block item-block_2">
+                            <div class="item-block-icon">
+                                <img src="./img/icons/bed-solid.svg" alt="sleep">
+                            </div>
+                            <h3 class="item-block-header">
+                                Hotels
+                            </h3>
+                            <h4 class="item-block-body">
+                                Book the Perfect Hotel in Fort Lauderdale with up to 75% Discount! Compare the Best Hotels in Fort Lauderdale from the Largest Selection. Most Properties. Mobile Friendly. Low Prices.
+                            </h4>
+                        </div>
+
+                        <div class="benefits__item item-block item-block_3">
+                            <div class="item-block-icon">
+                                <img src="./img/icons/plane-departure-solid.svg" alt="plane">
+                            </div>
+                            <h3 class="item-block-header">
+                                Fly
+                            </h3>
+                            <h4 class="item-block-body">
+                                Compare & Find Cheap, Last Minute Flight Tickets with 520+ Airlines. Lowest Fare Guarantee. Worldwide Internal & International Flights .
+                            </h4>
+                        </div>
+                    </div>
+                </div>    
+                </div>
+            </section>
        </main>
 
 
@@ -92,6 +145,8 @@
         const header__menu = document.querySelector('.header__menu');
 
         const header__menu_locations = document.querySelector('._locations');
+        const header__menu_benefits = document.querySelector('._benefits');
+        const header__menu_contact = document.querySelector('._contact');
 
         header__burger.addEventListener('click', function(event){ 
             header__burger.classList.toggle('active'); 
@@ -102,6 +157,16 @@
             // header__burger.classList.remove('active'); 
             // header__menu.classList.remove('active'); 
             // document.body.classList.remove('lock'); 
+            header__burger.classList.toggle('active'); 
+            header__menu.classList.toggle('active'); 
+            document.body.classList.toggle('lock');
+        })
+        header__menu_benefits.addEventListener('click', function(event){
+            header__burger.classList.toggle('active'); 
+            header__menu.classList.toggle('active'); 
+            document.body.classList.toggle('lock');
+        })
+        header__menu_contact.addEventListener('click', function(event){
             header__burger.classList.toggle('active'); 
             header__menu.classList.toggle('active'); 
             document.body.classList.toggle('lock');

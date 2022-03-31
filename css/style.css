@@ -264,10 +264,104 @@ nav a{
     }
 }
 
-/* City */
+/* benefits */
+
+.benefits{
+
+}
+.benefits__header-wrapper{
+    background: rgb(129, 129, 129);
+}
+.benefits__header{
+    text-align: center;
+    padding: 25px 0 35px 0;
+    color: white;
+}
+.benefits__header h2{
+    padding: 3rem 0;
+    font-weight: bold;
+}
+
+.benefits__header h3{
+    line-height: 35px;
+}
+
+/* benefits__items */
+
+.benefits__items{
+   display: flex;
+   margin: 30px 0;
+   /* justify-content: space-between; */
+}
+.benefits__item{
+    /* margin: 40px auto; */
+    margin: 10px auto;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    box-shadow: 1px 1px 15px  rgb(141, 141, 141);
+    animation: benefitsItemAnimation 3s infinite alternate ease-in-out;
+}
+.item-block-icon{
+    min-height: 50px;
+    background: #131c27;
+    text-align: center;
+}
+.item-block-icon img{
+    max-width: 50px;
+    padding: 10px;
+}
+.benefits__item .item-block-body{
+    flex: 1 1 auto;
+}
+.item-block-header{
+    text-align: center;
+    padding: 20px 0;
+}
+.item-block-body{
+    line-height: 35px;
+    padding: 7px 7px  25px 7px ;
+    text-align: center;
+}
+
+
+@keyframes benefitsItemAnimation{
+    0%{
+        transform: translate(0%, -2%);
+    }
+    100%{
+        transform: translate(0%, 0%);
+    }
+}
+
 
 
 /* media queries */
+@media (max-width: 999px) {
+    .benefits__header{
+        padding: 20px 0 25px 0;
+    }
+    .benefits__header h2{
+        padding: 1rem 0;
+    }
+    
+    .benefits__header h3{
+        line-height: 30px;
+    }
+
+    .benefits__items{
+       flex-wrap: wrap;
+    }
+    .item-block_1, .item-block_2{
+        max-width: 45%;
+        margin-bottom: 25px;
+    }
+    .item-block_3{
+        max-width: 100%;
+        margin: 0 15px 0 15px;
+    }
+}
 
 @media (max-width: 900px){
     .nav-link a{
@@ -297,21 +391,18 @@ nav a{
     .locations{
         min-height: 100vh;
     }
+
+    .benefits__header{
+        padding: 15px 0 25px 0;
+    }
+    .benefits__header h2{
+        padding: 2rem 0;
+    }
+    
+    .benefits__header h3{
+        line-height: 25px;
+    }
 }   
-@media (max-width: 510px){
-    .hero h3{
-        font-size: 90%;
-    }
-
-    .locations__header h3{
-        font-size: 90%;
-    }
-
-    .locations{
-        min-height: 80vh;
-    }
-}
-   
    @media (max-width: 767px){
    
        html{
@@ -405,3 +496,34 @@ nav a{
            padding: 5rem 0px 0px 0px;
        }
    }
+
+   @media (max-width: 660px){
+
+    /*  */
+
+    .item-block_1, .item-block_2, .item-block_3{
+        max-width: 100%;
+        margin: 10px 15px;
+    }
+    .item-block_3{
+
+    }
+   }
+
+   @media (max-width: 510px){
+    .hero h3{
+        font-size: 90%;
+    }
+
+    .locations__header h3{
+        font-size: 90%;
+    }
+
+    .locations{
+        min-height: 80vh;
+    }
+
+    .benefits__header h3{
+        font-size: 90%;
+    }
+}
