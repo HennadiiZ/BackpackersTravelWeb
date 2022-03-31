@@ -142,6 +142,10 @@ nav a{
 }
 .nav-links .nav-link a{
     color:  white;
+    transition: all 0.3s ease 0s;
+}
+.nav-links .nav-link a:hover{
+    color:  rgb(202, 202, 202);
 }
 
 .header__burger{
@@ -166,6 +170,8 @@ nav a{
     display: flex;
     align-items: center;
     line-height: 35px;
+    position: relative;
+    z-index: 3;
 }
 
 .hero h3{
@@ -180,9 +186,12 @@ nav a{
     background: transparent;
     color: white;
     text-shadow: 1px 1px 1px black;
+    transition: all 0.3s ease 0s;
 }
 .hero button:hover{
     background: rgb(166, 176, 177);
+    transition: all 0.3s ease 0s;
+    border-radius: 50%;
 }
 
 /* locations */
@@ -191,7 +200,9 @@ nav a{
    /* background: url('../img/new-york-page.png'); */
    background: linear-gradient(rgba(0,0,0,.5), transparent) , url("../img/new-york-page.png") no-repeat ;
    background-size: cover;
-   background-position: center;   
+   background-position: center;  
+   
+   position: relative;
 }
 
 .locations__header{
@@ -199,6 +210,8 @@ nav a{
     justify-content: center;
     flex-direction: column; 
     justify-content: flex-end; 
+    position: relative;
+    z-index: 4;
 }
 
 .locations__header h2{
@@ -209,11 +222,48 @@ nav a{
     line-height: 35px;
 
     /* CSS Gradient Text */
-    background: -webkit-linear-gradient(rgb(61, 64, 226), rgb(4, 4, 58));
+    background: -webkit-linear-gradient(rgb(4, 4, 58), rgb(156, 164, 165));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* cloud */
+.cloud{
+    position : absolute;
+    top: 0;
+    right: 0;
+
+    /* pointer-events: none; */
+}
+.moving-cloud-1{
+   z-index: 2;
+   animation: cloudAnimationFront 3s infinite alternate ease-in-out;
+}
+.moving-cloud-2{
+    top: 20%;
+    z-index: -1;
+    opacity: .5;
+    animation: cloudAnimationBack 3s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimationFront{
+    0%{
+        transform: translate(10%, -10%);
+    }
+    100%{
+        transform: translate(0%, 0%);
+    }
+}
+@keyframes cloudAnimationBack{
+    0%{
+        transform: translate(0%, 0%);
+    }
+    100%{
+        transform: translate(10%, -10%);
+    }
+}
+
 /* City */
 
 
@@ -255,6 +305,10 @@ nav a{
 
     .locations__header h3{
         font-size: 90%;
+    }
+
+    .locations{
+        min-height: 80vh;
     }
 }
    
