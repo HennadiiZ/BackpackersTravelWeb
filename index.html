@@ -33,7 +33,7 @@
                     <div class="header__menu">
                         <ul class="nav-links">
                             <li class="nav-link">
-                                <a href="#locations">Locations</a>
+                                <a href="#locations" class="_locations">Locations</a>
                             </li>
                             <li class="nav-link">
                                 <a href="#benefits">Benefits</a>
@@ -60,6 +60,22 @@
                    <button>Book Now</button>
                </div>
            </section>
+
+            <!-- locations -->
+            <section class="locations" id="locations">
+                <div class="container">
+                    <div class="locations__header">
+                        <h2>The Perfect Travelling experience</h2>
+                        <h3>
+                            We cover everything for picking the perfect hotel <br>
+                            to flight and destination.
+                        </h3>
+                        <!-- <img src="img/cloud.png" class="moving-cloud-1 cloud" alt="cloud">
+                        <img src="img/cloud.png" class="moving-cloud-2 cloud" alt="cloud"> -->
+                    </div>
+                </div>
+            </section>
+            <!-- City -->
        </main>
 
 
@@ -72,10 +88,21 @@
    <script>
         const header__burger = document.querySelector('.header__burger'); 
         const header__menu = document.querySelector('.header__menu');
+
+        const header__menu_locations = document.querySelector('._locations');
+
         header__burger.addEventListener('click', function(event){ 
             header__burger.classList.toggle('active'); 
             header__menu.classList.toggle('active'); 
             document.body.classList.toggle('lock'); 
+        })
+        header__menu_locations.addEventListener('click', function(event){
+            // header__burger.classList.remove('active'); 
+            // header__menu.classList.remove('active'); 
+            // document.body.classList.remove('lock'); 
+            header__burger.classList.toggle('active'); 
+            header__menu.classList.toggle('active'); 
+            document.body.classList.toggle('lock');
         })
    </script>
 </body>

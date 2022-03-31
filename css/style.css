@@ -185,6 +185,36 @@ nav a{
     background: rgb(166, 176, 177);
 }
 
+/* locations */
+.locations{
+   min-height: 110vh;
+   /* background: url('../img/new-york-page.png'); */
+   background: linear-gradient(rgba(0,0,0,.5), transparent) , url("../img/new-york-page.png") no-repeat ;
+   background-size: cover;
+   background-position: center;   
+}
+
+.locations__header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    justify-content: flex-end; 
+}
+
+.locations__header h2{
+    margin: 150px 0px 30px 0px;
+}
+
+.locations__header h3{
+    line-height: 35px;
+
+    /* CSS Gradient Text */
+    /* background: -webkit-linear-gradient(rgb(61, 64, 226), rgb(4, 4, 58));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+/* City */
 
 
 /* media queries */
@@ -205,9 +235,25 @@ nav a{
         min-height: 80vh;
         line-height: 25px;
     }
+
+    .locations__header h2{
+        margin: 100px 0px 20px 0px;
+    }
+    
+    .locations__header h3{
+        line-height: 25px;
+    }
+
+    .locations{
+        min-height: 100vh;
+    }
 }   
 @media (max-width: 510px){
     .hero h3{
+        font-size: 90%;
+    }
+
+    .locations__header h3{
         font-size: 90%;
     }
 }
