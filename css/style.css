@@ -297,6 +297,7 @@ nav a{
     /* margin: 40px auto; */
     margin: 10px auto;
     max-width: 300px;
+    /* flex: 1 1 25rem; */
     display: flex;
     flex-direction: column;
     min-height: 50px;
@@ -335,7 +336,68 @@ nav a{
     }
 }
 
+/* contact */
+.contact{
+    /* background: url('../img/contact-mountain.png'); */
+    background: linear-gradient(rgba(0,0,0,.5), transparent) , url("../img/contact-mountain.png") no-repeat ;
+    background-size: cover;
+    background-position: center; 
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.contact__wrapper{
+    background: rgba(51, 51, 59, 0.7);
+    border: 1px solid rgba(51, 51, 59, 0.5);
+    /* border-radius: 8px 8px 0px 0px; */
+    border-radius: 10px;
+}
+.contact__header h2{
+    color: white;
+    text-align: center;
+    margin: 20px 0 25px;
+}
 
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-items{
+    margin: 20px 140px;
+}
+.form-item{
+    margin: 20px;
+}
+.form-item label {
+   margin: 0rem 3rem;
+   /* flex: 1 1 auto; */
+}
+.form-item input{
+    margin: 10px;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.form-btn{
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px ;
+}
+.btn{
+    padding: 15px 0px;
+    font-size: 95%;
+    color: white;
+    width: 100%;
+    background: rgb(79, 86, 126);
+    border-radius: 0px 0px 10px 10px ;
+    transition: all 0.3s ease 0s;
+}
+.btn:hover{ 
+    background: rgb(96, 101, 133);
+    transition: all 0.3s ease 0s;
+}
 
 /* media queries */
 @media (max-width: 999px) {
@@ -367,6 +429,22 @@ nav a{
     .nav-link a{
        font-size: 85%;
     }
+}
+
+/*  */
+@media (max-width: 800px){
+    .form-items{
+        max-width: 700px;
+        margin: 10px 10px;
+    }
+    .contact__header h2{
+        margin: 10px 0 0px;
+    }
+
+    .contact{
+        min-height: 80vh;
+    }
+
 }
 @media (max-width: 767px){
     .hero button{
@@ -505,8 +583,8 @@ nav a{
         max-width: 100%;
         margin: 10px 15px;
     }
-    .item-block_3{
-
+    .contact{
+        min-height: 70vh;
     }
    }
 
