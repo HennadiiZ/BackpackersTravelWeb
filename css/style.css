@@ -209,10 +209,10 @@ nav a{
     line-height: 35px;
 
     /* CSS Gradient Text */
-    /* background: -webkit-linear-gradient(rgb(61, 64, 226), rgb(4, 4, 58));
+    background: -webkit-linear-gradient(rgb(61, 64, 226), rgb(4, 4, 58));
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 /* City */
 
