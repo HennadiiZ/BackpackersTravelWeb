@@ -399,6 +399,18 @@ nav a{
     transition: all 0.3s ease 0s;
 }
 
+/* footer */
+.main-footer{
+    color: white;
+    background: #131c27;
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    align-items: center;
+}
+
 /* media queries */
 @media (max-width: 999px) {
     .benefits__header{
@@ -576,9 +588,6 @@ nav a{
    }
 
    @media (max-width: 660px){
-
-    /*  */
-
     .item-block_1, .item-block_2, .item-block_3{
         max-width: 100%;
         margin: 10px 15px;
