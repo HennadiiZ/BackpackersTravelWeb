@@ -139,20 +139,21 @@
                             <h2>Contact Us.</h2>
                         </div>
 
-                        <form action="" class="contact__form form">
+                        <!-- https://formspree.io/ -->
+                        <form  id="my-form" action="https://formspree.io/f/mrgjaywg" method="POST" class="contact__form form">
                             <div class="form-items">
                                 <div class="form-item form-name">
                                     <!-- <label for="name">Name</label> -->
-                                    <input type="text" id="name" placeholder="Name">
+                                    <input name="message" type="text" id="name" placeholder="Name">
                                 </div>
                                 <div class="form-item form-email">
                                     <!-- <label for="email">Email</label> -->
-                                    <input type="email" id="email" placeholder="Email">
+                                    <input name="email" type="email" id="email" placeholder="Email">
                                 </div>
                             </div>
-
+                            <p id="my-form-status"></p>
                             <div class="form-btn">
-                                <button type="submit" class="btn">Submit</button>
+                                <button id="my-form-button" type="submit" class="btn">Submit</button>
                             </div>
                         </form>
                     </div>
